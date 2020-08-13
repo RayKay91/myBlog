@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/styles.css" />
+    <title>RayKay91's Blog</title>
+  </head>
+  <body>
+    <h1 class="logo">
+      RayKay91's blog
+    </h1>
+    <nav class="navlinks">
+      <ul>
+        <li>Home</li>
+        <li>Posts</li>
+        <li>About</li>
+      </ul>
+    </nav>
+    <% blogPosts.forEach(post =>{ %>
+    <div class="blog-card">
+      <h3 class="blog-card-title"><%=post.title%></h3>
+      <p class="blog-card-title"><%=post.body%></p>
+      <a href=<%='/posts/' + post._id%> class="post-link">Click here to read more</a>
+    </div>
+    <%})%>
+  </body>
+</html>
