@@ -1,5 +1,27 @@
-<form action="/post" method="POST">
-  <input type="text" name="title" />
-  <input type="text" name="body" />
-  <button type="submit">Click to submit</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Create Post</title>
+  </head>
+  <body>
+<%-include('partials/sidebar.ejs')%>
+<div class="main-content">
+  <div>
+
+    <h1>New Post</h1>
+  </div>
+  <div class='form-container'>
+<form action="/create-post" method="POST">
+      <label for="title">Blog Title</label>
+      <input  placeholder='Enter blog title' type="text" name="title" />
+      <label for="body">Blog Body</label>
+      <textarea placeholder='Enter blog content' type="text" name="body"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+  </body>
+</html>

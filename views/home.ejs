@@ -1,28 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
-    <link rel="stylesheet" href="../public/styles.css" />
-    <title>RayKay91's Blog</title>
-  </head>
-  <body>
-    <h1 class="logo">
-      RayKay91's blog
-    </h1>
-    <nav class="navlinks">
-      <ul>
-        <li>Home</li>
-        <li>Posts</li>
-        <li>About</li>
-      </ul>
-    </nav>
-    <% blogPosts.forEach(post =>{ %>
-    <div class="blog-card">
-      <h3 class="blog-card-title"><%=post.title%></h3>
-      <p class="blog-card-title"><%=post.body%></p>
-      <a href=<%='/posts/' + post._id%> class="post-link">Click here to read more</a>
-    </div>
-    <%})%>
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>RayKay91's Blog</title>
+      </head>
+      <body>
+        <%- include('partials/sidebar')%>
+        <div class='main-content'>
+          <p>
+            Hi! 👋. This is a public blog where you can write a post and view it! It has data persistence as the posts are saved to a database in the cloud using <strong>MongoDB</strong>. This website was made using <strong>express</strong> to handle routing, <strong>mongoose</strong> to handle the database CRUD ops and <strong>EJS</strong> as a templating system.
+          </p>
+
   </body>
 </html>

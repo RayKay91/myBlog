@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>All Posts</title>
+  </head>
+  <body>
+<%- include('partials/sidebar')%>
+<div class='main-content'>
+  <div>
+
+    <h1>Posts</h1>
+  </div>
+
+    <% if (blogPosts.length ===0){ %>
+      <p>😓 Hmmm... looks like there are no posts! Why not write your own?</p>
+      <a class='post-link' href="/create-post">Write a new post</a>
+   <% } else { %>
+
+    <% blogPosts.forEach(post =>{ %>
+
+        <div class="blog-card">
+          <h3 class="blog-card-title"><%=post.title%></h3>
+          <p class="blog-card-body"><%=post.body%></p>
+          <a href=<%='/posts/' + post._id%> class="post-link">Click here to read more</a>
+        </div>
+    
+      <%})}%>
+      </div>
+</div>
+<script src='/truncateScript.js'></script>
+</body>
+</html>
+
+
