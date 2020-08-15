@@ -7,34 +7,38 @@
     <title><%=blogPost.title%></title>
   </head>
   <body>
+    <%-include('partials/sidebar.ejs')%>
+    <div class="main-content">
+      <div>
+        <h1 class="postTitle" data-postId="<%=blogPost._id%>"
+          ><%=blogPost.title%></h1
+        >
+        <p class="date"><%=blogPost.createdAt%></p>
+      </div>
+      <p><%=blogPost.body%></p>
+      <div class="UD-buttons">
+        <button class="ud-btns quit" id="delete">Delete</button>
+        <button class="ud-btns" id="patch">Update</button>
+      </div>
 
-<%-include('partials/sidebar.ejs')%>
-<div class="main-content">
-    <div>
+      <form
+        class="update-form hide"
+        action="/post/update/<%=blogPost._id%>"
+        method="POST"
+      >
+        <label for="title">Blog Title</label>
+        <input placeholder="Update blog title" type="text" name="title" />
+        <label for="body">Blog Body</label>
+        <textarea
+          placeholder="Update blog content"
+          type="text"
+          name="body"
+        ></textarea>
 
-        <h1 class="postTitle" data-postId='<%=blogPost._id%>'><%=blogPost.title%></h1>
-        <p class='date'><%=blogPost.createdAt%></p>
+        <button type="submit">Update blog</button>
+      </form>
     </div>
-    <p><%=blogPost.body%></p>
-    <div class="UD-buttons">
-      
-      <button class='ud-btns quit' id='delete'>Delete</button>
-      <button class='ud-btns' id='patch'>Update</button>
-    </div>
 
-    <form class='update-form hide' action="/post/update/<%=blogPost._id%>" method="POST">
-      <label for="title">Blog Title</label>
-      <input  placeholder='Update blog title' type="text" name="title" />
-      <label for="body">Blog Body</label>
-      <textarea placeholder='Update blog content' type="text" name="body"></textarea>
-
-      <button class='quit'>Cancel</button>
-      <button type="submit">Update blog</button>
-    </form>
-
-</div>
-
-<script src='/delAndPatchRequests.js'></script>
-</body>
+    <script src="/delAndPatchRequests.js"></script>
+  </body>
 </html>
-
