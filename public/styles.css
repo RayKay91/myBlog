@@ -1,195 +1,196 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-
 body {
-
-    line-height: 1.3;
-    letter-spacing: 0.25px;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 25vw 1fr;
-    grid-template-rows: 1fr 10%;
-    grid-template-areas: "sidebar-upper main-content"
-                         "sidebar-lower main-content"
-                         
-                         
+  line-height: 1.3;
+  letter-spacing: 0.25px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 25vw 1fr;
+  grid-template-rows: 1fr 10%;
+  grid-template-areas:
+    'sidebar-upper main-content'
+    'sidebar-lower main-content';
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 a:visited {
-    color: white
+  color: white;
 }
-
 
 .sidebar-upper {
-    grid-area: sidebar-upper;
-    background-color: rgb(0,40,70);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  grid-area: sidebar-upper;
+  background-color: rgb(0, 40, 70);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-
 h1 {
-    margin: 1rem auto;
+  margin: 1rem auto;
 }
 
 .main-content {
-    grid-area: main-content;
-    background-color: rgb(249, 249, 249);
-    color: #323232;
-    padding: 5rem 7rem;
-    font-size: 1.2rem;
-   display: flex;
-   flex-direction: column
-
+  grid-area: main-content;
+  background-color: rgb(249, 249, 249);
+  color: #323232;
+  padding: 5rem 7rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-content > div {
-    margin-bottom: 1rem
+  margin-bottom: 3rem;
+}
+.ud-btns {
+  margin-top: 2rem;
+  width: 12.5%;
+  height: 2rem;
+  background-color: rgb(10, 132, 255);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.quit {
+  background-color: rgb(255, 70, 70);
+}
+.date {
+  font-size: 0.7rem;
+  color: #999;
 }
 
 .about {
-
-    align-self: flex-start
+  align-self: flex-start;
 }
 
 .footer-container {
-    grid-area: sidebar-lower;
-    background-color: papayawhip;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    min-height: 10vh
-
+  grid-area: sidebar-lower;
+  background-color: papayawhip;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 10vh;
 }
 .footer-container > p {
-    margin-bottom: 1.5rem
+  margin-bottom: 1.5rem;
 }
 
 .nav {
-    display:flex;
-margin-top: 3rem;
-height: 150px;
-
-
-
+  display: flex;
+  margin-top: 3rem;
+  height: 150px;
 }
 
 .nav ul {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 li {
-    list-style-type: none;
-    font-size: 1.5rem;
-    color:white
+  list-style-type: none;
+  font-size: 1.5rem;
+  color: white;
 }
 li > a {
-    padding-left: 10px;
-    
+  padding-left: 10px;
 }
 
 .sidebar-upper a:hover {
-    padding-left: 14px;
-    border-left: 3px solid white
-
-    
+  padding-left: 14px;
+  border-left: 3px solid white;
 }
 .redirect {
-    color: #323232;
-    text-align:center
+  color: #323232;
+  text-align: center;
 }
 .redirect-link {
-    text-decoration: underline
+  text-decoration: underline;
 }
 .redirect:visited {
-    color: #323232;
+  color: #323232;
 }
 
 .blog-card {
-
-    background-color: white;
-    border-radius: 3px;
-    margin: 1rem;
-    padding: 10px;
-    box-shadow: 0px 0px 22px 3px rgba(0,0,0,0.14);
+  background-color: white;
+  border-radius: 3px;
+  margin: 1rem;
+  padding: 10px;
+  box-shadow: 0px 0px 22px 3px rgba(0, 0, 0, 0.14);
 }
 .blog-card p {
-    padding: 1rem 0;
-    font-size: 1rem
+  padding: 1rem 0;
+  font-size: 1rem;
 }
 
 .blog-card a {
-    color: rgb(10,132,255);
-    font-size: 0.75rem
+  color: rgb(10, 132, 255);
+  font-size: 0.75rem;
 }
 .post-link:hover {
-    text-decoration: underline
+  text-decoration: underline;
 }
 .post-link:visited {
-    color: rgb(10,132,255);
-
+  color: rgb(10, 132, 255);
 }
 
 .form-container {
-    height: 100%
+  height: 100%;
 }
 
 label {
-    font-size: 0.8rem;
-    color: #444;
-    padding-left: 5px
+  font-size: 0.8rem;
+  color: #444;
+  padding: 5px;
 }
 form {
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 75%;
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 75%;
 }
 
-
 form input {
-    height: 2rem;
-    width: 100%;
-    margin-bottom: 25px;
-    padding-left: 5px
+  height: 2rem;
+  width: 100%;
+  margin-bottom: 25px;
+  padding-left: 5px;
 }
 
 form textarea {
-    width: 100%;
-    height:300px;
-    resize: none;
-    margin-bottom: 25px;
-    padding: 10px 
+  width: 100%;
+  height: 300px;
+  resize: none;
+  margin-bottom: 25px;
+  padding: 10px;
 }
-
-
 
 form button {
-    width: 25%;
-    height: 2rem;
-    background-color: rgb(10,132,255); 
-    color: white;
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    align-self: flex-end;
-    cursor: pointer;
-    font-size: 1rem
+  width: 25%;
+  height: 2rem;
+  background-color: rgb(10, 132, 255);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
+.hide {
+  display: none;
+}

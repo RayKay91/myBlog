@@ -1,0 +1,11 @@
+I was trying for ages to make a redirect work after the delete request had been made via AJAX and I couldn't figure it out until I came across this stackoverflow post:
+
+The problem might not lie with the backend, but with the frontend. If you are using AJAX to send the POST request, it is specifically designed to not change your url.
+
+Use window.location.href after AJAX's request has completed (in the .done()) to update the URL with the desired path, or use JQuery: $('body').replaceWith(data) when you receive the HTML back from the request.
+
+so I set the fetch request to :
+
+fetch('PATH' + POSTID, {
+    method: 'DELETE'
+}).then( () => window.location.pathname = 'PATHOFINTENDEDREDIRECT')
