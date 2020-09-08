@@ -82,7 +82,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  min-height: 10vh;
+  min-height: 100%;
 }
 .footer-container > p {
   margin-bottom: 1.5rem;
