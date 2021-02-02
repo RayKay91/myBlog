@@ -51,7 +51,8 @@ h1 {
   margin-bottom: 3rem;
 }
 
-.main-content p {
+.blog-card-body,
+.blog-body {
   white-space: pre-wrap;
 }
 .ud-btns {
