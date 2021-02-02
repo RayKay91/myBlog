@@ -50,6 +50,10 @@ h1 {
 .main-content > div {
   margin-bottom: 3rem;
 }
+
+.main-content p {
+  white-space: pre-wrap;
+}
 .ud-btns {
   margin-top: 2rem;
   width: 12.5%;
