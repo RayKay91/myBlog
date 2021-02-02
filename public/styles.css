@@ -20,6 +20,7 @@ body {
 a {
   color: white;
   text-decoration: none;
+  transition: all 0.25s ease;
 }
 a:visited {
   color: white;
