@@ -59,7 +59,6 @@ const updatePost = (req, res) => {
   Post.findByIdAndUpdate(postId, req.body, (err, updated) => {
     if (!err) {
       res.redirect('/posts');
-      console.log(updated);
     } else {
       res.redirect('/404');
     }
